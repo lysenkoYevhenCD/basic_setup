@@ -1,0 +1,17 @@
+# Build outputs
+dist
+build
+node_modules
+coverage
+
+# Generated files
+*.min.js
+*.min.css
+
+# Config files
+.eslintrc.cjs
+eslint.config.js
+
+# Others
+esm
+cjs
