@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { Toaster } from 'sonner';
 
-import { routes } from '@/router';
-import TanstackProvider from '@/providers/TanstackProvider';
-import MuiThemeProvider from '@/providers/MuiThemeProvider';
+import TanstackProvider from './providers/Tanstack.provider';
+import MuiThemeProvider from './providers/MuiTheme.provider';
+import { routes } from './router';
 
 const App = () => {
   const router = createBrowserRouter(routes);

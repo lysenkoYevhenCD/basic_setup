@@ -1,6 +1,8 @@
 import type { RouteObject } from 'react-router';
-import { RoutePath } from '@/enums';
-import MainLayout from '@/layouts/MainLayout';
+import RootLayout from 'layouts/Root';
+import AuthLayout from 'layouts/Auth';
+
+import { RoutePath } from './types';
 
 export const routes: RouteObject[] = [
   {
@@ -8,15 +10,28 @@ export const routes: RouteObject[] = [
     element: <div>Page not fount</div>,
   },
   {
-    element: <MainLayout />,
+    element: <RootLayout />,
     children: [
       {
         path: RoutePath.Root,
         element: <div>Main Page</div>,
       },
       {
+        path: RoutePath.Root,
+        element: <div>Second Main Page</div>,
+      },
+    ],
+  },
+  {
+    element: <AuthLayout />,
+    children: [
+      {
         path: RoutePath.Login,
-        element: <div>Login page</div>,
+        element: <div>Login Page</div>,
+      },
+      {
+        path: RoutePath.Register,
+        element: <div>Register Page</div>,
       },
     ],
   },

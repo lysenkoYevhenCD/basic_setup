@@ -23,7 +23,14 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "components/*": ["./src/components/*"],
+      "pages/*": ["./src/pages/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "assets/*": ["./src/assets/*"],
+      "views/*": ["./src/views/*"],
+      "utils/*": ["./src/utils/*"],
+      "theme/*": ["./src/theme/*"],
+      "src/*": ["./src/*"]
     }
   },
   "include": ["src", "src/types"]

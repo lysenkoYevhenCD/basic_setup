@@ -37,7 +37,6 @@ export default [
         NodeJS: false,
       },
     },
-
     plugins: {
       "@typescript-eslint": tseslint.plugin,
       react: react,
@@ -232,19 +231,21 @@ export default [
       "jsx-a11y/tabindex-no-positive": "off",
 
       // Simple import sort
-      "simple-import-sort/exports": "warn",
-      "simple-import-sort/imports": [
-        "warn",
+      'sort-imports': 'off',
+      'import/order': 'off',
+      'simple-import-sort/imports': [
+        'warn',
         {
           groups: [
-            ["^\\u0000"],
-            ["^node:"],
-            ["^react", "^@?\\w"],
-            ["^"],
-            ["^\\."],
+            ['^\\u0000'],
+            ['^node:'],
+            ['^react', '^@?\\w'],
+            ['^'],
+            ['^\\.'],
           ],
         },
       ],
+      'simple-import-sort/exports': 'warn',
 
       // React Refresh
       "react-refresh/only-export-components": [
